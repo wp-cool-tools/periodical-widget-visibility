@@ -5,7 +5,7 @@
 *
 * This file is used to markup the admin-facing aspects of the plugin.
 *
-* @link       http://stehle-internet.de/
+* @link       https://www.kybernetik-services.com/
 * @since      1.0.0
 *
 * @package    Periodical_Widget_Visibility

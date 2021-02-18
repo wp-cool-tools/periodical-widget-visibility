@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @link              http://stehle-internet.de/
+ * @link              https://www.kybernetik-services.com/
  * @since             1.0.0
  * @package           Periodical_Widget_Visibility
  *
@@ -9,11 +9,11 @@
  * Plugin Name:       Periodical Widget Visibility
  * Plugin URI:        https://wordpress.org/plugins/periodical-widget-visibility/
  * Description:       Control the periodical visibility of each widget based on weekdays within a yearly time period easily.
- * Version:           2.3.4
+ * Version:           2.3.5
  * Requires at least: 3.5
  * Requires PHP:      5.2
- * Author:            Martin Stehle
- * Author URI:        http://stehle-internet.de/
+ * Author:            Kybernetik Services
+ * Author URI:        https://www.kybernetik-services.com/
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       periodical-widget-visibility

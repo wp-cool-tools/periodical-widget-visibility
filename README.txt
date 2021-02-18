@@ -1,10 +1,10 @@
 === Periodical Widget Visibility ===
-Contributors: Hinjiriyo
+Contributors: kybernetikservices,Hinjiriyo
 Tags: control, day, deutsch, display, german, hide, jetpack, month, period, plan, schedule, scheduler, show, spanish, time, unlimited, visibility, weekdays, widget, widgets, year
 Requires at least: 3.5
 Requires PHP: 5.2
-Tested up to: 5.6
-Stable tag: 2.3.4
+Tested up to: 5.6.1
+Stable tag: 2.3.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -101,6 +101,10 @@ All texts of the plugin are in the *.pot file. You would find the *.pot file in 
 
 == Changelog ==
 
+= 2.3.5 =
+* Tested successfully with WordPress 5.6.1
+* New branding
+
 = 2.3.4 =
 * Tested successfully with WordPress 5.6
 
@@ -123,7 +127,7 @@ All texts of the plugin are in the *.pot file. You would find the *.pot file in 
 * Tested successfully with WordPress 4.9.1
 
 = 2.2 =
-* Revised sanitations for texts and URLs on the pages
+* Revised sanitation for texts and URLs on the pages
 * Revised translations
 * Set activation message as dismissible
 * Tested successfully with WordPress 4.8

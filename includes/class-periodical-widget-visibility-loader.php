@@ -3,7 +3,7 @@
 /**
  * Register all actions and filters for the plugin
  *
- * @link       http://stehle-internet.de/
+ * @link       https://www.kybernetik-services.com/
  * @since      1.0.0
  *
  * @package    Periodical_Widget_Visibility
@@ -19,7 +19,7 @@
  *
  * @package    Periodical_Widget_Visibility
  * @subpackage Periodical_Widget_Visibility/includes
- * @author     Martin Stehle <shop@stehle-internet.de>
+ * @author     Kybernetik Services <wordpress@kybernetik.com.de>
  */
 class Periodical_Widget_Visibility_Loader {
 

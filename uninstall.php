@@ -3,7 +3,7 @@
 /**
  * Fired when the plugin is uninstalled.
  *
- * @link       http://stehle-internet.de/
+ * @link       https://www.kybernetik-services.com/
  * @since      1.2
  *
  * @package    Periodical_Widget_Visibility
