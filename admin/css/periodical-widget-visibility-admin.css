@@ -1,0 +1,21 @@
+/* hide the fields in SiteOrigin */
+.so-panels-dialog-wrapper div.pwv-container {
+	display: none;
+}
+/* all other styles */
+div.pwv-collapsed .pwv-scheduler {
+	display: none;
+}
+div.pwv-expanded .pwv-scheduler {
+	display: block;
+}
+.pwv-container fieldset legend {
+	padding: 0;
+	font-weight: bold;
+}
+.customize-control .pwv-container input {
+	width: auto;
+}
+.customize-control .pwv-container select {
+	min-width: 0;
+}
