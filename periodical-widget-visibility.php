@@ -13,7 +13,7 @@
  * Requires at least: 3.5
  * Requires PHP:      5.2
  * Author:            Kybernetik Services
- * Author URI:        https://www.kybernetik-services.com/
+ * Author URI:        https://www.kybernetik-services.com/?utm_source=wordpress_org&utm_medium=plugin&utm_campaign=periodical-widget-visibility&utm_content=author
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       periodical-widget-visibility
