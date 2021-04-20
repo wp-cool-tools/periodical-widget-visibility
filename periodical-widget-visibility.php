@@ -9,7 +9,7 @@
  * Plugin Name:       Periodical Widget Visibility
  * Plugin URI:        https://wordpress.org/plugins/periodical-widget-visibility/
  * Description:       Control the periodical visibility of each widget based on weekdays within a yearly time period easily.
- * Version:           2.3.5
+ * Version:           2.3.6
  * Requires at least: 3.5
  * Requires PHP:      5.2
  * Author:            Kybernetik Services
@@ -25,12 +25,22 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
+define( 'WVT_ROOT', plugin_dir_path( __FILE__ ) );
+define( 'WVT_URL', plugin_dir_url( __FILE__ ) );
+
+function pwv_autoloader( $class_name )
+{
+    if ( false !== strpos( $class_name, 'Periodical_Widget_Visibility' ) ) {
+        include WVT_ROOT . 'includes/class-' . $class_name . '.php';
+    }
+}
+spl_autoload_register('pwv_autoloader');
+
 /**
  * The code that runs during plugin activation.
  * This action is documented in includes/class-periodical-widget-visibility-activator.php
  */
 function activate_periodical_widget_visibility() {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-periodical-widget-visibility-activator.php';
 	Periodical_Widget_Visibility_Activator::activate();
 }
 
@@ -39,18 +49,11 @@ function activate_periodical_widget_visibility() {
  * This action is documented in includes/class-periodical-widget-visibility-deactivator.php
  */
 function deactivate_periodical_widget_visibility() {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-periodical-widget-visibility-deactivator.php';
 	Periodical_Widget_Visibility_Deactivator::deactivate();
 }
 
 register_activation_hook( __FILE__, 'activate_periodical_widget_visibility' );
 register_deactivation_hook( __FILE__, 'deactivate_periodical_widget_visibility' );
-
-/**
- * The core plugin class that is used to define internationalization,
- * admin-specific hooks, and public-facing site hooks.
- */
-require plugin_dir_path( __FILE__ ) . 'includes/class-periodical-widget-visibility.php';
 
 /**
  * Begins execution of the plugin.

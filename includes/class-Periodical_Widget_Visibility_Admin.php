@@ -93,9 +93,9 @@ class Periodical_Widget_Visibility_Admin {
 		// load only if we are on the Widgets page
 		if ( 'widgets.php' == $hook_suffix ) {
 			if( is_rtl() ) {
-				wp_enqueue_style( $this->plugin_slug, plugin_dir_url( __FILE__ ) . 'css/periodical-widget-visibility-admin-rtl.css', array(), $this->plugin_version, 'all' );
+				wp_enqueue_style( $this->plugin_slug, WVT_URL . 'admin/css/periodical-widget-visibility-admin-rtl.css', array(), $this->plugin_version, 'all' );
 			} else {
-				wp_enqueue_style( $this->plugin_slug, plugin_dir_url( __FILE__ ) . 'css/periodical-widget-visibility-admin.css', array(), $this->plugin_version, 'all' );
+				wp_enqueue_style( $this->plugin_slug, WVT_URL . 'admin/css/periodical-widget-visibility-admin.css', array(), $this->plugin_version, 'all' );
 			}
 		}
 	}
@@ -110,7 +110,7 @@ class Periodical_Widget_Visibility_Admin {
 		// load only if we are on the Widgets page
 		if ( 'widgets.php' == $hook_suffix ) {
 			// scripts for the admin pages
-			wp_enqueue_script( $this->plugin_slug, plugin_dir_url( __FILE__ ) . 'js/periodical-widget-visibility-admin.js', array( 'jquery' ), $this->plugin_version, false );
+			wp_enqueue_script( $this->plugin_slug, WVT_URL . 'admin/js/periodical-widget-visibility-admin.js', array( 'jquery' ), $this->plugin_version, false );
 
 			// translations in scripts
 			$translations = array(
@@ -273,7 +273,7 @@ class Periodical_Widget_Visibility_Admin {
 		}
 
 		// print additional input fields in widget
-		include 'partials/formfields.php';
+		include WVT_ROOT . 'admin/partials/formfields.php';
 		
 		// return null because new fields are added
 		return null;

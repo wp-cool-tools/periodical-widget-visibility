@@ -69,7 +69,7 @@ class Periodical_Widget_Visibility {
 	public function __construct() {
 
 		$this->plugin_slug = 'periodical-widget-visibility';
-		$this->version = '2.3.5';
+		$this->version = '2.3.6';
 
 		$this->load_dependencies();
 		$this->set_locale();
@@ -95,29 +95,6 @@ class Periodical_Widget_Visibility {
 	 * @access   private
 	 */
 	private function load_dependencies() {
-
-		/**
-		 * The class responsible for orchestrating the actions and filters of the
-		 * core plugin.
-		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-periodical-widget-visibility-loader.php';
-
-		/**
-		 * The class responsible for defining internationalization functionality
-		 * of the plugin.
-		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-periodical-widget-visibility-i18n.php';
-
-		/**
-		 * The class responsible for defining all actions that occur in the admin area.
-		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-periodical-widget-visibility-admin.php';
-
-		/**
-		 * The class responsible for defining all actions that occur in the public-facing
-		 * side of the site.
-		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-periodical-widget-visibility-public.php';
 
 		$this->loader = new Periodical_Widget_Visibility_Loader();
 

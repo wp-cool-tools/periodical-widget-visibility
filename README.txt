@@ -3,8 +3,8 @@ Contributors: kybernetikservices,Hinjiriyo
 Tags: control, day, deutsch, display, german, hide, jetpack, month, period, plan, schedule, scheduler, show, spanish, time, unlimited, visibility, weekdays, widget, widgets, year
 Requires at least: 3.5
 Requires PHP: 5.2
-Tested up to: 5.6.1
-Stable tag: 2.3.5
+Tested up to: 5.7
+Stable tag: 2.3.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -20,6 +20,10 @@ The plugin is available in English, Spanish (Español) and German (Deutsch). It 
 
 Do you want to show a widget every year on Christmas days, Eastern, or hide it on your summer holidays? This plugin enables you to control the visibility of a widget from your desired start day till the desired end day in the year and on the selected weekdays.
 
+= Much more options available =
+
+If you want to schedule the visibility based on the daytime of each weekday and more precisely defined repetitions [go to the Pro version of the plugin](https://www.kybernetik-services.com/shop/wordpress/plugin/periodical-widget-visibility-pro/?utm_source=wordpress_org&utm_medium=plugin&utm_campaign=periodical-widget-visibility&utm_content=update-notice-readme).
+
 = Compatibility with Jetpack =
 
 This plugin works perfectly with Jetpack's "Widget Visibility" module. Both plugins enhance each other to give you great control about when and where to display which widget on your website.
@@ -31,6 +35,16 @@ The user interface is available in
 * English
 * Spanish (Español)
 * German (Deutsch)
+
+= More options with the Pro version =
+
+If you are looking for finer filters of the timed visibility take a look at the Pro version of this plugin. That version comes with all options of this plugin and contains additional options:
+
+* **Visibility based on the time on each weekday**: You can finetune the daily visibility based on the time of the weekday, from a start time to an end time in the day.
+* **Visibility based on days in months**: You can control the visibility of the widget based on every day of a month, from 1 to 31, and every month of a year. Since the months can have 28, 29, 30 or 31 days but you want to use the last day of any month there is an extra option ‘last day‘ which picks the last day of a month regardless of the length of a month.
+* **Visibility based on weekdays in months**: The option ‘Weekdays of month‘ enables you to select every ordinal number, every day of a week, from Monday to Sunday, and every month of a year to control the visibility of the widget. If you want to pick the last weekday in every month take the option ‘last‘.
+
+Go to the online shop of [Periodical Widget Visibility Pro](https://www.kybernetik-services.com/shop/wordpress/plugin/periodical-widget-visibility-pro/?utm_source=wordpress_org&utm_medium=plugin&utm_campaign=periodical-widget-visibility&utm_content=update-notice-readme).
 
 == Installation ==
 
@@ -100,6 +114,11 @@ All texts of the plugin are in the *.pot file. You would find the *.pot file in 
 2. The second screenshot shows the time controls for every widget in german language
 
 == Changelog ==
+
+= 2.3.6 =
+* const names standardized
+* added autoload class
+* Tested successfully with WordPress 5.7.1
 
 = 2.3.5 =
 * Tested successfully with WordPress 5.6.1

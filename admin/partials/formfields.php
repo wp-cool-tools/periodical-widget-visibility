@@ -1,5 +1,4 @@
 <?php
-
 /**
 * Provide a admin area view for the plugin
 *
@@ -11,6 +10,7 @@
 * @package    Periodical_Widget_Visibility
 * @subpackage Periodical_Widget_Visibility/admin/partials
 */
+
 ?>
 <div class="pwv-container pwv-collapsed">
 	<div class="pwv-scheduler">
@@ -48,6 +48,7 @@
 				</select></label>
 			</p>
 		</fieldset>
+		<p><?php esc_html_e( 'Do you need more options?', 'periodical-widget-visibility' );?> <a href="https://www.kybernetik-services.com/shop/wordpress/plugin/periodical-widget-visibility-pro/?utm_source=wordpress_org&utm_medium=plugin&utm_campaign=periodical-widget-visibility&utm_content=update-notice" target="_blank"><?php esc_html_e( 'Get the Pro version.', 'periodical-widget-visibility' );?></a></p>
 	</div><!-- .pwv-scheduler -->
 	<p><a href="#" class="button hinjipwv-link"><?php esc_html_e( 'Open scheduler', 'periodical-widget-visibility' ); ?></a></p>
 </div><!-- .pwv-container -->
