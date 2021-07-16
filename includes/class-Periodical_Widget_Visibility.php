@@ -69,7 +69,7 @@ class Periodical_Widget_Visibility {
 	public function __construct() {
 
 		$this->plugin_slug = 'periodical-widget-visibility';
-		$this->version = '2.3.6';
+		$this->version = '2.3.7';
 
 		$this->load_dependencies();
 		$this->set_locale();
@@ -148,8 +148,42 @@ class Periodical_Widget_Visibility {
 				delete_transient( $this->plugin_slug );
 			}
 		}
-		
+
+		if( self::is_wp_58_or_higher() ) {
+
+            $this->loader->add_action( 'admin_notices', $plugin_admin, 'display_wp58_message' );
+
+        }
+
 	}
+
+    /**
+     * Check the version of WordPress and returns true if it is 5.8 or higher
+     * Additional we consider if the plugin Classic Widgets is installed.
+     *
+     * @since    2.3.7
+     * @access   private
+     *
+     * @return   bool;
+     *
+     */
+    private function is_wp_58_or_higher(): bool {
+
+        global $wp_version;
+
+        include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+
+        // get the major and minor version number as integer
+        $pos = strpos( $wp_version, '.');
+        $ver = intval( substr( $wp_version, '0', $pos ) . substr( $wp_version, $pos + 1 , 1 ) );
+
+        if( !is_plugin_active( 'classic-widgets/classic-widgets.php' ) && $ver >= 58 ) {
+            return true;
+        }
+
+        return false;
+
+    }
 
 	/**
 	 * Register all of the hooks related to the public-facing functionality

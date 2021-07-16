@@ -165,7 +165,24 @@ class Periodical_Widget_Visibility_Admin {
 
 	}
 
-	/**
+    /**
+     * Print a message about the block based widgets in since WP 5.8
+     *
+     * @since    2.3.7
+     */
+    public function display_wp58_message() {
+
+        printf(
+            '<div class="notice-warning notice"><p>%s</p></div>',
+            sprintf(
+                __( '<b>Important:</b> You are using WordPress 5.8 or higher. Periodical Widget Visibility is currently not compatible with the newly introduced block based widgets. To continue using Periodical Widget Visibility, please install and activate the plug-in %s. It brings back the usual widgets and Periodical Widget Visibility is working as expected.', 'periodical-widget-visibility' ),
+                '<a href="https://wordpress.org/plugins/classic-widgets/" target="_blank">Classic Widgets</a>'
+            )
+        );
+
+    }
+
+    /**
 	 * Add the widget conditions to each widget in the admin.
 	 *
 	 * @param $widget unused.

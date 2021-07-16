@@ -9,7 +9,7 @@
  * Plugin Name:       Periodical Widget Visibility
  * Plugin URI:        https://wordpress.org/plugins/periodical-widget-visibility/
  * Description:       Control the periodical visibility of each widget based on weekdays within a yearly time period easily.
- * Version:           2.3.6
+ * Version:           2.3.7
  * Requires at least: 3.5
  * Requires PHP:      5.2
  * Author:            Kybernetik Services
