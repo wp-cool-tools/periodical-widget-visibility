@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/donate?hosted_button_id=NSEQX73VHXKS8
 Tags: control, day, deutsch, display, german, hide, jetpack, month, period, plan, schedule, scheduler, show, spanish, time, unlimited, visibility, weekdays, widget, widgets, year
 Requires at least: 3.5
 Requires PHP: 5.2
-Tested up to: 5.8
+Tested up to: 5.9
 Stable tag: 2.3.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -17,7 +17,10 @@ Control the periodical visibility of each widget based on weekdays within a year
 
 The plugin is available in English, Spanish (Español) and German (Deutsch). It does not collect any personal data, so it is ready for EU General Data Protection Regulation (GDPR) compliance.
 
-== Compatibility with WordPress 5.8 block based widgets ==
+= Demo =
+You want to test Periodical Widget Visibility before installing on your site? Try it out on your free dummy site and [click here](https://demo.tastewp.com/periodical-widget-visibility).
+
+= Compatibility with WordPress 5.8 block based widgets =
 
 With WordPress 5.8 the block based widgets were introduced. The technique behind these new widget concept is more complex. One of the changes is, the widgets are now using API call to display.
 Extensive programming is required to prepare Periodical Widget Visibility for this new feature. Nothing I could do in the short time I was able to test this feature.
@@ -26,8 +29,8 @@ As known from the Gutenberg block editor, there is also a plug-in to deactivate 
 
 Please download, install and activate [Classic Widgets](https://wordpress.org/plugins/classic-widgets/) from wordpress.org and switch back to the usual widget area.
 
-I'm working hard to make Periodical Widget Visibility compatible for WordPress 5.8 and the upcoming 5.9. Both take some time to provide a stable and error-free code base.
-Stay tuned for a brand new version in the near future. And thank you for your understanding.
+I'm working hard to make Periodical Widget Visibility compatible with the block based widgets. Both take some time to provide a stable and error-free code base.
+Stay tuned for a brand-new version. And thank you for your understanding.
 
 = Show and hide widgets at desired days within a yearly time period repeatedly =
 
@@ -53,7 +56,7 @@ The user interface is available in
 
 If you are looking for finer filters of the timed visibility take a look at the Pro version of this plugin. That version comes with all options of this plugin and contains additional options:
 
-* **Visibility based on the time on each weekday**: You can finetune the daily visibility based on the time of the weekday, from a start time to an end time in the day.
+* **Visibility based on the time on each weekday**: You can fine tune the daily visibility based on the time of the weekday, from a start time to an end time in the day.
 * **Visibility based on days in months**: You can control the visibility of the widget based on every day of a month, from 1 to 31, and every month of a year. Since the months can have 28, 29, 30 or 31 days but you want to use the last day of any month there is an extra option ‘last day‘ which picks the last day of a month regardless of the length of a month.
 * **Visibility based on weekdays in months**: The option ‘Weekdays of month‘ enables you to select every ordinal number, every day of a week, from Monday to Sunday, and every month of a year to control the visibility of the widget. If you want to pick the last weekday in every month take the option ‘last‘.
 * Premium Support – Pro users get premium support whilst free support is offered in the WordPress forums in our spare time
