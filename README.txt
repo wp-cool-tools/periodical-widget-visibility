@@ -18,7 +18,7 @@ Control the periodical visibility of each widget based on weekdays within a year
 The plugin is available in English, Spanish (Español) and German (Deutsch). It does not collect any personal data, so it is ready for EU General Data Protection Regulation (GDPR) compliance.
 
 = Demo =
-You want to test Periodical Widget Visibility before installing on your site? Try it out on your free dummy site and [click here](https://demo.tastewp.com/periodical-widget-visibility).
+You want to test Periodical Widget Visibility before installing on your site? Try it out on [WordPress playground](https://playground.wordpress.net/?theme=twentytwentyone&plugin=periodical-widget-visibility&plugin=classic-widgets&url=/wp-admin/widgets.php).
 
 = Compatibility with WordPress 5.8 block based widgets =
 
