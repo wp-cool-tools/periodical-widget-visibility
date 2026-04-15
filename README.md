@@ -1,7 +1,9 @@
-# WP Sitemaps Config #
+# Periodical Widget Visibility #
+
+Tags: widget visibility, widget scheduler, widgets, jetpack, schedule
 [![WordPress plugin](https://img.shields.io/wordpress/plugin/dt/periodical-widget-visibility.svg?style=flat)](https://wordpress.org/plugins/periodical-widget-visibility/) [![WordPress plugin](https://img.shields.io/wordpress/plugin/v/periodical-widget-visibility.svg?style=flat)](https://wordpress.org/plugins/periodical-widget-visibility/) [![WordPress](https://img.shields.io/wordpress/v/periodical-widget-visibility.svg?style=flat)]() [![License](https://img.shields.io/badge/license-GPL%203.0%2B-lightgrey.svg?style=flat-square)](https://github.com/openstream/woocommerce-runmyaccounts/blob/master/LICENSE)
 
-ontrol the periodical visibility of each widget based on weekdays within a yearly time period easily.
+Control the periodical visibility of each widget based on weekdays within a yearly time period easily.
 
 The plugin is available in English, Spanish (Español) and German (Deutsch). It does not collect any personal data, so it is ready for EU General Data Protection Regulation (GDPR) compliance.
 
