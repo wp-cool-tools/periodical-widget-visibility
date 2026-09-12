@@ -77,6 +77,12 @@ class Periodical_Widget_Visibility_Public {
 			}			
 		}
 
+		// Normalize legacy numeric strings before strict weekday comparisons.
+		if ( ! is_array( $widget_settings[ $plugin_slug ]['daysofweek'] ) || ! is_array( $widget_settings[ $plugin_slug ]['timestamps'] ) ) {
+			return $widget_settings;
+		}
+		$scheduled_weekdays = array_map( 'absint', array_filter( $widget_settings[ $plugin_slug ]['daysofweek'], 'is_scalar' ) );
+
 		// get values of blog's current date and time
 		$current_timestamp		= (int) current_time( 'timestamp' ); // get current local blog timestamp
 		$current[ 'month' ]		= (int) date( 'n', $current_timestamp ); // get current month; 1 to 12
@@ -96,7 +102,7 @@ class Periodical_Widget_Visibility_Public {
 		
 		// action per weekday and daytime
 		if (
-			in_array( $current[ 'weekday' ], $widget_settings[ $plugin_slug ][ 'daysofweek' ] )
+			in_array( $current[ 'weekday' ], $scheduled_weekdays, true )
 		) {
 			// action per frequency
 			/*
