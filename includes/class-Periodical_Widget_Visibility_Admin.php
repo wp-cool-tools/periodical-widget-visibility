@@ -335,7 +335,7 @@ class Periodical_Widget_Visibility_Admin {
 			return $widget_settings;
 		}
 
-		// Use APIs available since WordPress 3.5 for the declared minimum version.
+		// Unslash and sanitize only the scalar scheduler fields.
 		$field_names = array( 'mode', 'yearly_period_start_day', 'yearly_period_start_month', 'yearly_period_end_day', 'yearly_period_end_month' );
 		foreach ( array( 'mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun' ) as $weekday ) {
 			foreach ( array( 'start', 'end' ) as $boundary ) {

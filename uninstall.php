@@ -19,48 +19,16 @@ if ( ! current_user_can( 'delete_plugins' ) ) {
 	wp_die( esc_html__( 'Sorry, you are not allowed to delete plugins for this site.', 'periodical-widget-visibility' ) );
 }
 
-/*
-// if wrong referer exit
-check_admin_referer( 'bulk-plugins' );
-
-//$_POST = from the plugin form; $_GET = from the FTP details screen.
-$status	= isset( $_GET[ 'plugin_status' ] )	? $_GET[ 'plugin_status' ] : 'all';
-$page 	= isset( $_GET[ 'paged' ] )			? $_GET[ 'paged' ] : '1';
-$s		= isset( $_GET[ 's' ] )				? $_GET[ 's' ] : '';
-
-$plugins = isset( $_REQUEST[ 'checked' ] ) ? (array) $_REQUEST[ 'checked' ] : array();
-
-// if no plugins to delete go to plugins page
-if ( empty( $plugins ) ) {
-	wp_redirect( self_admin_url( "plugins.php?plugin_status=$status&paged=$page&s=$s" ) );
-	exit;
-}
-
-// if current plugin not in list go to plugins page
-if ( false === array_search ( dirname( plugin_basename( __FILE__ ) ) . '/periodical-widget-visibility.php', $plugins ) ) {
-	wp_redirect( self_admin_url( "plugins.php?plugin_status=$status&paged=$page&s=$s" ) );
-	exit;
-}
-*/
-
 // clean up the database considering multisite installation
 if ( is_multisite() ) {
 
-	// get registered site IDs
-	$site_ids = array();
-	if ( version_compare( get_bloginfo( 'version' ), '4.6', '>=' ) ) {
-		$sites = get_sites();
-		foreach ( $sites as $site ) {
-			$site_ids[] = $site->id;
-		}
-	} else {
-		$sites = wp_get_sites();
-		foreach ( $sites as $site ) {
-			$site_ids[] = $site[ 'blog_id' ];
-		}
-	}
-
-	if ( empty ( $site_ids ) ) return;
+	// Retrieve every site ID without the deprecated network API or result limit.
+	$site_ids = get_sites(
+		array(
+			'fields' => 'ids',
+			'number' => 0,
+		)
+	);
 
 	foreach ( $site_ids as $site_id ) {
 		// switch to next blog
@@ -68,9 +36,10 @@ if ( is_multisite() ) {
 
 		// remove widgets
 		delete_option( 'widget_periodical-widget-visibility' );
+
+		// Balance each switch before moving to the next site.
+		restore_current_blog();
 	}
-	// restore the current blog, after calling switch_to_blog()
-	restore_current_blog();
 } else {
 	// remove widgets
 	delete_option( 'widget_periodical-widget-visibility' );

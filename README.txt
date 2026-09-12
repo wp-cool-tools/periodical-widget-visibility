@@ -2,7 +2,7 @@
 Contributors: kybernetikservices,wpcooltools, Hinjiriyo
 Donate link: https://www.paypal.com/donate?hosted_button_id=NSEQX73VHXKS8
 Tags: widget schedule, widget scheduler, widgets, jetpack, schedule
-Requires at least: 3.5
+Requires at least: 4.6
 Requires PHP: 5.2
 Tested up to: 7.1
 Stable tag: 2.4.0
