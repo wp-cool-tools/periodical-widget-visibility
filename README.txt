@@ -96,11 +96,11 @@ Go to the online shop of [Periodical Widget Visibility Pro](https://www.kybernet
 
 1. Go to the Widget page in the WordPress backend. Every widget is enhanced by easy-to-use fields for time data.
 2. Set comfortably the date and time definitions when to show or hide the widget.
-3. After you have define the time data just save the widget settings. Done!
+3. After you have defined the time data just save the widget settings. Done!
 
 = Is there an option page? =
 
-No. That is not neccessary. You set the visibility in each widget on the Widgets page in the backend.
+No. That is not necessary. You set the visibility in each widget on the Widgets page in the backend.
 
 = Do the scheduler settings effect cached pages? =
 
@@ -134,14 +134,15 @@ All texts of the plugin are in the *.pot file. You would find the *.pot file in 
 
 = 2.4.0 =
 * Fix: Use site-local calendar values and timezone-independent recurring date and time comparisons.
+* Fix: Preserve existing schedules when a request does not contain an authorized scheduler form.
+* Fix: Compatibility with PHP 5.2 was no longer valid.
 * Maintenance: Use strict selection comparisons and the GPL-2.0-or-later SPDX license identifier.
 * Maintenance: Require WordPress 4.6 and use get_sites() for complete, balanced multisite cleanup.
 * Maintenance: Register bundled translations on init and complete translation metadata.
+* Tweak: Added direct file access prevention
 * Security: Escaped scheduler form values and translated admin notices in their output context.
 * Security: Verified the scheduler nonce and widget editing capability before processing submitted settings.
 * Security: Unslashed, sanitized, and validated submitted values, including missing fields and malformed arrays.
-* Tweak: Added direct file access prevention
-* Fix: Preserve existing schedules when a request does not contain an authorized scheduler form.
 
 = 2.3.7 =
 * added admin notice regarding block based widgets

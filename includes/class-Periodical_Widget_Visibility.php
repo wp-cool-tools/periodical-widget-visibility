@@ -156,7 +156,7 @@ class Periodical_Widget_Visibility {
      * @return   bool;
      *
      */
-    private function is_wp_58_or_higher(): bool {
+    private function is_wp_58_or_higher() {
 
         global $wp_version;
 
@@ -175,7 +175,7 @@ class Periodical_Widget_Visibility {
     }
 
 	/**
-	 * Register all of the hooks related to the public-facing functionality
+	 * Register all the hooks related to the public-facing functionality
 	 * of the plugin.
 	 *
 	 * @since    1.0.0
@@ -194,7 +194,7 @@ class Periodical_Widget_Visibility {
 	}
 
 	/**
-	 * Run the loader to execute all of the hooks with WordPress.
+	 * Run the loader to execute all the hooks with WordPress.
 	 *
 	 * @since    1.0.0
 	 */
