@@ -136,10 +136,11 @@ All texts of the plugin are in the *.pot file. You would find the *.pot file in 
 * Fix: Use site-local calendar values and timezone-independent recurring date and time comparisons.
 * Fix: Preserve existing schedules when a request does not contain an authorized scheduler form.
 * Fix: Compatibility with PHP 5.2 was no longer valid.
-* Maintenance: Use strict selection comparisons and the GPL-2.0-or-later SPDX license identifier.
-* Maintenance: Require WordPress 4.6 and use get_sites() for complete, balanced multisite cleanup.
-* Maintenance: Register bundled translations on init and complete translation metadata.
+* Tweak: Use strict selection comparisons and the GPL-2.0-or-later SPDX license identifier.
+* Tweak: Require WordPress 4.6 and use get_sites() for complete, balanced multisite cleanup.
+* Tweak: Register bundled translations on init and complete translation metadata.
 * Tweak: Added direct file access prevention
+* Tweak: Added screen reader text for link text.
 * Security: Escaped scheduler form values and translated admin notices in their output context.
 * Security: Verified the scheduler nonce and widget editing capability before processing submitted settings.
 * Security: Unslashed, sanitized, and validated submitted values, including missing fields and malformed arrays.

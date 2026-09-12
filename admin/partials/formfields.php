@@ -60,7 +60,7 @@ foreach ( $weekday_names as $weekday_name ) {
 				</select></label>
 			</p>
 		</fieldset>
-		<p><?php esc_html_e( 'Do you need more options?', 'periodical-widget-visibility' ); ?> <a href="https://www.kybernetik-services.com/shop/wordpress/plugin/periodical-widget-visibility-pro/?utm_source=wordpress_org&utm_medium=plugin&utm_campaign=periodical-widget-visibility&utm_content=update-notice" target="_blank"><?php esc_html_e( 'Get the Pro version.', 'periodical-widget-visibility' ); ?></a></p>
+		<p><?php esc_html_e( 'Do you need more options?', 'periodical-widget-visibility' ); ?> <a href="https://www.kybernetik-services.com/shop/wordpress/plugin/periodical-widget-visibility-pro/?utm_source=wordpress_org&utm_medium=plugin&utm_campaign=periodical-widget-visibility&utm_content=update-notice" target="_blank" aria-label="<?php esc_html_e( 'Get the Pro version.', 'periodical-widget-visibility' ); ?>"><?php esc_html_e( 'Get the Pro version.', 'periodical-widget-visibility' ); ?></a></p>
 	</div><!-- .pwv-scheduler -->
-	<p><a href="#" class="button hinjipwv-link"><?php esc_html_e( 'Open scheduler', 'periodical-widget-visibility' ); ?></a></p>
+	<p><a href="#" class="button hinjipwv-link" aria-label="<?php esc_html_e( 'Open scheduler', 'periodical-widget-visibility' ); ?>"><?php esc_html_e( 'Open scheduler', 'periodical-widget-visibility' ); ?></a></p>
 </div><!-- .pwv-container -->
