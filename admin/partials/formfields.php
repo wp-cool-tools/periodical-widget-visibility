@@ -23,8 +23,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<h4><?php esc_html_e( 'Periodical Widget Visibility', 'periodical-widget-visibility' ); ?></h4>
 		<p><label><?php echo esc_html_x( 'Schedule', 'post action/button label', 'periodical-widget-visibility' ); ?> <select name="periodical-widget-visibility[mode]">
 			<option value=""><?php esc_html_e( '&mdash; Select &mdash;', 'periodical-widget-visibility' ); ?></option>
-<?php foreach ( $modes as $mode ) { ?>
-			<option value="<?php echo esc_attr( $mode ); ?>"<?php selected( $mode, $this->scheduler['mode'] ); ?>><?php echo 'Show' === $mode ? esc_html__( 'Show', 'periodical-widget-visibility' ) : esc_html__( 'Hide', 'periodical-widget-visibility' ); ?></option>
+<?php foreach ( $modes as $scheduler_mode ) { ?>
+			<option value="<?php echo esc_attr( $scheduler_mode ); ?>"<?php selected( $scheduler_mode, $this->scheduler['mode'] ); ?>><?php echo 'Show' === $scheduler_mode ? esc_html__( 'Show', 'periodical-widget-visibility' ) : esc_html__( 'Hide', 'periodical-widget-visibility' ); ?></option>
 <?php } ?>
 			</select></label>
 		</p>
