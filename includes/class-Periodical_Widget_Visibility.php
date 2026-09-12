@@ -57,7 +57,7 @@ class Periodical_Widget_Visibility {
 	public function __construct() {
 
 		$this->plugin_slug = 'periodical-widget-visibility';
-		$this->version = '2.3.8';
+		$this->version = '2.4.0';
 
 		$this->load_dependencies();
 		$this->set_locale();

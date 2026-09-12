@@ -5,7 +5,7 @@ Tags: widget schedule, widget scheduler, widgets, jetpack, schedule
 Requires at least: 3.5
 Requires PHP: 5.2
 Tested up to: 7.1
-Stable tag: 2.3.8
+Stable tag: 2.4.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -132,7 +132,7 @@ All texts of the plugin are in the *.pot file. You would find the *.pot file in 
 
 == Changelog ==
 
-= 2.3.8 =
+= 2.4.0 =
 * Security: Escaped scheduler form values and translated admin notices in their output context.
 * Security: Verified the scheduler nonce and widget editing capability before processing submitted settings.
 * Security: Unslashed, sanitized, and validated submitted values, including missing fields and malformed arrays.
