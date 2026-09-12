@@ -133,7 +133,11 @@ All texts of the plugin are in the *.pot file. You would find the *.pot file in 
 == Changelog ==
 
 = 2.3.8 =
-* added direct file access prevention
+* Security: Escaped scheduler form values and translated admin notices in their output context.
+* Security: Verified the scheduler nonce and widget editing capability before processing submitted settings.
+* Security: Unslashed, sanitized, and validated submitted values, including missing fields and malformed arrays.
+* Tweak: Added direct file access prevention
+* Fix: Preserve existing schedules when a request does not contain an authorized scheduler form.
 
 = 2.3.7 =
 * added admin notice regarding block based widgets

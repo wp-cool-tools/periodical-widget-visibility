@@ -130,6 +130,7 @@ class Periodical_Widget_Visibility {
 		$this->loader->add_action( 'widget_update_callback', $plugin_admin, 'widget_update', 10, 3 );
 
 		// hook on displaying a message after plugin activation
+		// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Read-only flags display a notice; no settings are changed.
 		if ( isset( $_GET[ 'activate' ] ) or isset( $_GET[ 'activate-multi' ] ) ) {
 			if ( false !== get_transient( $this->plugin_slug ) ) {
 				$this->loader->add_action( 'admin_notices', $plugin_admin, 'display_activation_message' );
