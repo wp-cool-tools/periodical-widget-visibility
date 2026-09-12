@@ -262,9 +262,9 @@ class Periodical_Widget_Visibility_Admin {
 
 		// set current date and time vars
 		// (neccessary to write it once more instead of re-use $this->xx because we are here in a non-object context)
-		$timestamp  = current_time( 'timestamp' ); // get current local blog timestamp
-		$current_mm = idate( 'm', $timestamp ); // get month number as integer
-		$current_dd = idate( 'd', $timestamp ); // get day number as integer
+		$current_datetime = new DateTime( current_time( 'mysql' ), new DateTimeZone( 'UTC' ) ); // Read site-local calendar fields in a fixed reference timezone.
+		$current_mm       = (int) $current_datetime->format( 'm' ); // get month number as integer
+		$current_dd       = (int) $current_datetime->format( 'd' ); // get day number as integer
 
 		// set timestamps of yearly period start and end
 		foreach ( array( 'yearly_period_start', 'yearly_period_end' ) as $boundary ) {
@@ -280,7 +280,7 @@ class Periodical_Widget_Visibility_Admin {
 			$var_day                      = ( 1 <= $var_day and $var_day <= 31 ) ? $var_day : $current_dd;
 			$this->scheduler[ $name_day ] = $var_day;
 
-			$this->scheduler['timestamps'][ $boundary ] = mktime(
+			$this->scheduler['timestamps'][ $boundary ] = gmmktime(
 				0, // hour
 				0, // minute
 				0, // second
@@ -406,9 +406,9 @@ class Periodical_Widget_Visibility_Admin {
 
 		// set current date and time vars
 		// (neccessary to write it once more instead of re-use $this->xx because we are here in a non-object context)
-		$timestamp  = current_time( 'timestamp' ); // get current local blog timestamp
-		$current_mm = idate( 'm', $timestamp ); // get month number as integer
-		$current_dd = idate( 'd', $timestamp ); // get day number as integer
+		$current_datetime = new DateTime( current_time( 'mysql' ), new DateTimeZone( 'UTC' ) ); // Read site-local calendar fields in a fixed reference timezone.
+		$current_mm       = (int) $current_datetime->format( 'm' ); // get month number as integer
+		$current_dd       = (int) $current_datetime->format( 'd' ); // get day number as integer
 
 		// set timestamps of widget start and end
 		foreach ( array( 'yearly_period_start', 'yearly_period_end' ) as $boundary ) {
@@ -424,7 +424,7 @@ class Periodical_Widget_Visibility_Admin {
 			$var_day                = ( 1 <= $var_day and $var_day <= 31 ) ? $var_day : $current_dd;
 			$scheduler[ $name_day ] = $var_day;
 
-			$scheduler['timestamps'][ $boundary ] = mktime(
+			$scheduler['timestamps'][ $boundary ] = gmmktime(
 				0, // hour
 				0, // minute
 				0, // second
@@ -459,7 +459,7 @@ class Periodical_Widget_Visibility_Admin {
 				$name          = $key . '-ss';
 				$time[ $name ] = 0;
 
-				$scheduler['timestamps'][ $key ] = mktime(
+				$scheduler['timestamps'][ $key ] = gmmktime(
 					$time[ $key . '-hh' ],
 					$time[ $key . '-mn' ],
 					$time[ $key . '-ss' ],

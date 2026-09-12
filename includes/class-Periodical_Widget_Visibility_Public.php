@@ -1,5 +1,7 @@
 <?php
-if (!defined('ABSPATH')) exit;
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 
 /**
  * The public-facing functionality of the plugin.
@@ -41,8 +43,7 @@ class Periodical_Widget_Visibility_Public {
 	public function __construct( $plugin_slug, $version ) {
 
 		$this->plugin_slug = $plugin_slug;
-		$this->version = $version;
-
+		$this->version     = $version;
 	}
 
 	/**
@@ -55,7 +56,7 @@ class Periodical_Widget_Visibility_Public {
 	public static function filter_widget( $widget_settings ) {
 
 		$plugin_slug = 'periodical-widget-visibility';
-		$weekdays = array(
+		$weekdays    = array(
 			1 => 'mon',
 			2 => 'tue',
 			3 => 'wed',
@@ -69,12 +70,12 @@ class Periodical_Widget_Visibility_Public {
 		if ( ! isset( $widget_settings[ $plugin_slug ] ) ) {
 			return $widget_settings;
 		}
-		
+
 		// check existence of required data, quit if not available
 		foreach ( array( 'mode', 'frequency', 'timestamps', 'daysofweek' ) as $required ) {
 			if ( ! isset( $widget_settings[ $plugin_slug ][ $required ] ) ) {
 				return $widget_settings;
-			}			
+			}
 		}
 
 		// Normalize legacy numeric strings before strict weekday comparisons.
@@ -84,54 +85,53 @@ class Periodical_Widget_Visibility_Public {
 		$scheduled_weekdays = array_map( 'absint', array_filter( $widget_settings[ $plugin_slug ]['daysofweek'], 'is_scalar' ) );
 
 		// get values of blog's current date and time
-		$current_timestamp		= (int) current_time( 'timestamp' ); // get current local blog timestamp
-		$current[ 'month' ]		= (int) date( 'n', $current_timestamp ); // get current month; 1 to 12
-		$current[ 'monthday' ]	= (int) date( 'j', $current_timestamp ); // get current day of the month; 1 to 31
-		$current[ 'weekday' ]	= (int) date( 'N', $current_timestamp ); // get current ISO-8601 numeric representation of the day of the week; 1 (for Monday) through 7 (for Sunday)
-		$current[ 'date' ] = mktime( 
+		$current_datetime    = new DateTime( current_time( 'mysql' ), new DateTimeZone( 'UTC' ) ); // Read site-local calendar fields in a fixed reference timezone.
+		$current['month']    = (int) $current_datetime->format( 'n' ); // get current month; 1 to 12
+		$current['monthday'] = (int) $current_datetime->format( 'j' ); // get current day of the month; 1 to 31
+		$current['weekday']  = (int) $current_datetime->format( 'N' ); // get current ISO-8601 numeric representation of the day of the week; 1 (for Monday) through 7 (for Sunday)
+		$current['date']     = gmmktime(
 			0, // hour
 			0, // minute
 			0, // second
-			$current[ 'month' ],
-			$current[ 'monthday' ],
+			$current['month'],
+			$current['monthday'],
 			1970 // year
 		);
-		
+
 		// initialize visibility trigger
 		$is_match = false;
-		
+
 		// action per weekday and daytime
 		if (
-			in_array( $current[ 'weekday' ], $scheduled_weekdays, true )
+			in_array( $current['weekday'], $scheduled_weekdays, true )
 		) {
 			// action per frequency
 			/*
 			switch ( $widget_settings[ $plugin_slug ][ 'frequency' ] ) {
 				case 'yearly_period':
 			*/
-				
+
 					// check desired values, else quit
-					if ( ! ( 
-						isset( $widget_settings[ $plugin_slug ][ 'timestamps' ][ 'yearly_period_start' ] )
-						and isset( $widget_settings[ $plugin_slug ][ 'timestamps' ][ 'yearly_period_end' ] )
+			if ( ! (
+						isset( $widget_settings[ $plugin_slug ]['timestamps']['yearly_period_start'] )
+						and isset( $widget_settings[ $plugin_slug ]['timestamps']['yearly_period_end'] )
 					) ) {
-						return $widget_settings;
-					}
-					
+				return $widget_settings;
+			}
+
 					// sanitize stored values
-					$custom[ 'date_start' ]	= absint( $widget_settings[ $plugin_slug ][ 'timestamps' ][ 'yearly_period_start' ] );
-					$custom[ 'date_end' ]	= absint( $widget_settings[ $plugin_slug ][ 'timestamps' ][ 'yearly_period_end' ] );
-					
+					$custom['date_start'] = absint( $widget_settings[ $plugin_slug ]['timestamps']['yearly_period_start'] );
+					$custom['date_end']   = absint( $widget_settings[ $plugin_slug ]['timestamps']['yearly_period_end'] );
+
 					// calculate visibility of widget
-					if ( 
-						$custom[ 'date_start' ] <= $current[ 'date' ]
-						and $current[ 'date' ] <= $custom[ 'date_end' ]
+			if ( $custom['date_start'] <= $current['date']
+						and $current['date'] <= $custom['date_end']
 					) {
-						$is_match = true;
-					}
+				$is_match = true;
+			}
 			/*
 					break;
-					
+
 				// if unknown value quit (= show widget)
 				default:
 					return $widget_settings;
@@ -139,8 +139,8 @@ class Periodical_Widget_Visibility_Public {
 			} // switch(frequency)
 			*/
 		}
-	
-		$is_opposite = ( 'Hide' == $widget_settings[ $plugin_slug ][ 'mode' ] ) ? true : false;
+
+		$is_opposite = ( 'Hide' == $widget_settings[ $plugin_slug ]['mode'] ) ? true : false;
 
 		// if current time matches custom time description
 		if ( $is_match ) {
@@ -149,5 +149,4 @@ class Periodical_Widget_Visibility_Public {
 			return ( $is_opposite ) ? $widget_settings : false; // if opposite show widget else hide widget
 		}
 	}
-
 }
