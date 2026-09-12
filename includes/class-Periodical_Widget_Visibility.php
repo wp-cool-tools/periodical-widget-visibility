@@ -1,17 +1,5 @@
 <?php
-
-/**
- * The file that defines the core plugin class
- *
- * A class definition that includes attributes and functions used across both the
- * public-facing side of the site and the admin area.
- *
- * @link       https://www.kybernetik-services.com/
- * @since      1.0.0
- *
- * @package    Periodical_Widget_Visibility
- * @subpackage Periodical_Widget_Visibility/includes
- */
+if (!defined('ABSPATH')) exit;
 
 /**
  * The core plugin class.
@@ -69,7 +57,7 @@ class Periodical_Widget_Visibility {
 	public function __construct() {
 
 		$this->plugin_slug = 'periodical-widget-visibility';
-		$this->version = '2.3.7';
+		$this->version = '2.3.8';
 
 		$this->load_dependencies();
 		$this->set_locale();

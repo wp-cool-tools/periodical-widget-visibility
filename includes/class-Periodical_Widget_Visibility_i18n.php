@@ -1,17 +1,5 @@
 <?php
-
-/**
- * Define the internationalization functionality
- *
- * Loads and defines the internationalization files for this plugin
- * so that it is ready for translation.
- *
- * @link       https://www.kybernetik-services.com/
- * @since      1.0.0
- *
- * @package    Periodical_Widget_Visibility
- * @subpackage Periodical_Widget_Visibility/includes
- */
+if (!defined('ABSPATH')) exit;
 
 /**
  * Define the internationalization functionality.

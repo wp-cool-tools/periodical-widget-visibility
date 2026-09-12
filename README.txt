@@ -5,7 +5,7 @@ Tags: widget schedule, widget scheduler, widgets, jetpack, schedule
 Requires at least: 3.5
 Requires PHP: 5.2
 Tested up to: 7.1
-Stable tag: 2.3.7
+Stable tag: 2.3.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -131,6 +131,9 @@ All texts of the plugin are in the *.pot file. You would find the *.pot file in 
 2. The second screenshot shows the time controls for every widget in german language
 
 == Changelog ==
+
+= 2.3.8 =
+* added direct file access prevention
 
 = 2.3.7 =
 * added admin notice regarding block based widgets

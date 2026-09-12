@@ -2,7 +2,7 @@
 /**
 * Provide a admin area view for the plugin
 *
-* This file is used to markup the admin-facing aspects of the plugin.
+* This file is used to mark up the admin-facing aspects of the plugin.
 *
 * @link       https://www.kybernetik-services.com/
 * @since      1.0.0
@@ -10,6 +10,8 @@
 * @package    Periodical_Widget_Visibility
 * @subpackage Periodical_Widget_Visibility/admin/partials
 */
+
+if (!defined('ABSPATH')) exit;
 
 ?>
 <div class="pwv-container pwv-collapsed">
