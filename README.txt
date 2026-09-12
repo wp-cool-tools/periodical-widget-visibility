@@ -6,7 +6,7 @@ Requires at least: 3.5
 Requires PHP: 5.2
 Tested up to: 7.1
 Stable tag: 2.4.0
-License: GPLv2 or later
+License: GPL-2.0-or-later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Control the periodical visibility of each widget based on weekdays within a yearly time period easily.
