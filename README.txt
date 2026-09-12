@@ -133,6 +133,10 @@ All texts of the plugin are in the *.pot file. You would find the *.pot file in 
 == Changelog ==
 
 = 2.4.0 =
+* Fix: Use site-local calendar values and timezone-independent recurring date and time comparisons.
+* Maintenance: Use strict selection comparisons and the GPL-2.0-or-later SPDX license identifier.
+* Maintenance: Require WordPress 4.6 and use get_sites() for complete, balanced multisite cleanup.
+* Maintenance: Register bundled translations on init and complete translation metadata.
 * Security: Escaped scheduler form values and translated admin notices in their output context.
 * Security: Verified the scheduler nonce and widget editing capability before processing submitted settings.
 * Security: Unslashed, sanitized, and validated submitted values, including missing fields and malformed arrays.
@@ -205,6 +209,9 @@ All texts of the plugin are in the *.pot file. You would find the *.pot file in 
 * Initial release
 
 == Upgrade Notice ==
+
+= 2.4.0 =
+Requires WordPress 4.6 or newer. Includes scheduler security hardening, timezone-independent calendar comparisons, and corrected multisite cleanup.
 
 = 2.3.4 =
 Tested with WordPress 5.6
