@@ -16,8 +16,7 @@ if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) {
 
 // if not allowed to delete plugins go to plugins page
 if ( ! current_user_can( 'delete_plugins' ) ) {
-	$text = 'Sorry, you are not allowed to delete plugins for this site.';
-	wp_die( esc_html__( $text ) );
+	wp_die( esc_html__( 'Sorry, you are not allowed to delete plugins for this site.', 'periodical-widget-visibility' ) );
 }
 
 /*

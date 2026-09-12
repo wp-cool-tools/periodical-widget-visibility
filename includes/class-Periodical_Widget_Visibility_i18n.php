@@ -30,6 +30,7 @@ class Periodical_Widget_Visibility_i18n {
 	 */
 	public function load_plugin_textdomain() {
 
+		// Bundled translations also work without a WordPress.org language pack.
 		load_plugin_textdomain(
 			$this->domain,
 			false,

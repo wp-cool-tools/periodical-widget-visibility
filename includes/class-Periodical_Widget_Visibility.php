@@ -102,7 +102,7 @@ class Periodical_Widget_Visibility {
 		$plugin_i18n = new Periodical_Widget_Visibility_i18n();
 		$plugin_i18n->set_domain( 'periodical-widget-visibility' );
 
-		$this->loader->add_action( 'plugins_loaded', $plugin_i18n, 'load_plugin_textdomain' );
+		$this->loader->add_action( 'init', $plugin_i18n, 'load_plugin_textdomain' );
 
 	}
 

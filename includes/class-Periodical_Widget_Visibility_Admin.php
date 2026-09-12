@@ -80,9 +80,6 @@ class Periodical_Widget_Visibility_Admin {
 
 		$this->plugin_slug    = $plugin_slug;
 		$this->plugin_version = $version;
-
-		// not in use, just for the po-editor to display the translation on the plugins overview list
-		$foo = __( 'Control the periodical visibility of each widget based on weekdays within a yearly time period easily.', 'periodical-widget-visibility' );
 	}
 
 	/**
