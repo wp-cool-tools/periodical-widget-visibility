@@ -301,7 +301,7 @@ class Periodical_Widget_Visibility_Admin {
 	 * Validate authorized scheduler submissions before saving widget settings.
 	 *
 	 * @param array|false $widget_settings     Settings from the widget update callback.
-	 * @param array       $new_widget_settings Submitted widget settings.
+	 * @param array       $new_widget_settings Unused; required to receive the following old settings hook argument.
 	 * @param array       $old_widget_settings Previously saved widget settings.
 	 * @return array|false Processed settings or an earlier rejection.
 	 */
