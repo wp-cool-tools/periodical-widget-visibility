@@ -60,7 +60,6 @@ class Periodical_Widget_Visibility {
 		$this->version = '2.4.0';
 
 		$this->load_dependencies();
-		$this->set_locale();
 		$this->define_admin_hooks();
 		$this->define_public_hooks();
 
@@ -72,7 +71,6 @@ class Periodical_Widget_Visibility {
 	 * Include the following files that make up the plugin:
 	 *
 	 * - Periodical_Widget_Visibility_Loader. Orchestrates the hooks of the plugin.
-	 * - Periodical_Widget_Visibility_i18n. Defines internationalization functionality.
 	 * - Periodical_Widget_Visibility_Admin. Defines all hooks for the admin area.
 	 * - Periodical_Widget_Visibility_Public. Defines all hooks for the public side of the site.
 	 *
@@ -89,25 +87,7 @@ class Periodical_Widget_Visibility {
 	}
 
 	/**
-	 * Define the locale for this plugin for internationalization.
-	 *
-	 * Uses the Periodical_Widget_Visibility_i18n class in order to set the domain and to register the hook
-	 * with WordPress.
-	 *
-	 * @since    1.0.0
-	 * @access   private
-	 */
-	private function set_locale() {
-
-		$plugin_i18n = new Periodical_Widget_Visibility_i18n();
-		$plugin_i18n->set_domain( 'periodical-widget-visibility' );
-
-		$this->loader->add_action( 'init', $plugin_i18n, 'load_plugin_textdomain' );
-
-	}
-
-	/**
-	 * Register all of the hooks related to the admin area functionality
+	 * Register all the hooks related to the admin area functionality
 	 * of the plugin.
 	 *
 	 * @since    1.0.0

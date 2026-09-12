@@ -123,12 +123,13 @@ Yes. Both plugins work together perfectly and enhance each other to give you gre
 
 The plugin is ready for right-to-left languages like Arabic or Hebrew.
 
-All texts of the plugin are in the *.pot file. You would find the *.pot file in the 'languages' directory of this plugin. If you would send the *.po file to me I would include it in the next release of the plugin.
+Periodical Widget Visibility is available in multiple languages maintained by the amazing WordPress community.
+Your language is missing? Please be part of the community and help to translate Periodical Widget Visibility on [GlotPress](https://translate.wordpress.org/projects/wp-plugins/periodical-widget-visibility/). Thank you!
 
 == Screenshots ==
 
-1. The first screenshot shows the time controls for every widget in english language
-2. The second screenshot shows the time controls for every widget in german language
+1. The first screenshot shows the time controls for every widget in English language
+2. The second screenshot shows the time controls for every widget in German language
 
 == Changelog ==
 
@@ -141,6 +142,7 @@ All texts of the plugin are in the *.pot file. You would find the *.pot file in 
 * Tweak: Register bundled translations on init and complete translation metadata.
 * Tweak: Added direct file access prevention
 * Tweak: Added screen reader text for link text.
+* Tweak: Moved language files to [GlotPress](https://translate.wordpress.org/projects/wp-plugins/periodical-widget-visibility/). So, please contribute as a translator to make Periodical Widget Visibility available in more and more languages.
 * Security: Escaped scheduler form values and translated admin notices in their output context.
 * Security: Verified the scheduler nonce and widget editing capability before processing submitted settings.
 * Security: Unslashed, sanitized, and validated submitted values, including missing fields and malformed arrays.
